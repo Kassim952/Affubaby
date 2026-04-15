@@ -4,12 +4,14 @@ import numpy as np
 def calc_rsi(closes, period=14):
     if len(closes) < period + 1:
         return np.array([])
+
     deltas = np.diff(closes)
     gains = np.where(deltas > 0, deltas, 0.0)
     losses = np.where(deltas < 0, -deltas, 0.0)
 
     avg_gain = np.zeros(len(deltas))
     avg_loss = np.zeros(len(deltas))
+
     avg_gain[period - 1] = np.mean(gains[:period])
     avg_loss[period - 1] = np.mean(losses[:period])
 
@@ -17,8 +19,11 @@ def calc_rsi(closes, period=14):
         avg_gain[i] = (avg_gain[i - 1] * (period - 1) + gains[i]) / period
         avg_loss[i] = (avg_loss[i - 1] * (period - 1) + losses[i]) / period
 
-    rs = np.where(avg_loss != 0, avg_gain / avg_loss, 100.0)
+    # ✅ FIXED LINE
+    rs = avg_gain / (avg_loss + 1e-10)
+
     rsi = 100.0 - (100.0 / (1.0 + rs))
+
     return rsi
 
 

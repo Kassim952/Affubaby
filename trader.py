@@ -7,14 +7,18 @@ from config import (
     SYMBOL_CONFIG, ENTRY_TIMEFRAME, TREND_TIMEFRAME,
     BREAKEVEN_TRIGGER_RR, TRAILING_STOP_STEP_RR, BROKER_TO_BASE
 )
-from .strategies import evaluate_all_strategies
-from .risk_manager import RiskManager
-from .market_data import get_candles, get_current_price
-from .telegram_alert import (
+from strategies import evaluate_all_strategies
+from config import (
+    META_API_TOKEN, META_API_ACCOUNT_ID, SYMBOLS, LOT_SIZE,
+    SYMBOL_CONFIG, ENTRY_TIMEFRAME, TREND_TIMEFRAME,
+    BREAKEVEN_TRIGGER_RR, TRAILING_STOP_STEP_RR, BROKER_TO_BASE
+)
+from risk_manager import RiskManager
+from market_data import get_candles, get_current_price
+from telegram_alert import (
     send_telegram, format_trade_alert,
     format_trade_close_alert, format_daily_summary
 )
-
 logger = logging.getLogger("trading_bot.trader")
 
 

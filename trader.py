@@ -2,7 +2,7 @@ import asyncio
 import logging
 import numpy as np
 from metaapi_cloud_sdk import MetaApi
-from .config import (
+from config import (
     META_API_TOKEN, META_API_ACCOUNT_ID, SYMBOLS, LOT_SIZE,
     SYMBOL_CONFIG, ENTRY_TIMEFRAME, TREND_TIMEFRAME,
     BREAKEVEN_TRIGGER_RR, TRAILING_STOP_STEP_RR, BROKER_TO_BASE

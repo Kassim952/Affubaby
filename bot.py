@@ -3,9 +3,9 @@ import logging
 import signal
 import sys
 from datetime import datetime, timezone
-from .trader import ForexTrader
-from .config import BOT_LOOP_INTERVAL
-from .telegram_alert import send_telegram
+from trader import ForexTrader
+from config import BOT_LOOP_INTERVAL
+from telegram_alert import send_telegram
 
 logging.basicConfig(
     level=logging.INFO,

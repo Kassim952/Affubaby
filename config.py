@@ -28,6 +28,11 @@ SYMBOL_CONFIG = {
     },
 }
 
+BROKER_TO_BASE = {
+    "XAUUSD.m": "XAUUSD",
+    "EURUSD.m": "EURUSD"
+}
+
 RSI_PERIOD = 14
 BB_PERIOD = 20
 BB_STD = 2

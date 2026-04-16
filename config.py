@@ -5,12 +5,12 @@ META_API_ACCOUNT_ID = os.environ.get("META_API_ACCOUNT_ID", "3f3a5aee-91fe-43ce-
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "8376148746:AAGQcbL-r620xlPNjAsIptkF-mzmoQv2qDg")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "8235208636")
 
-SYMBOLS = ["XAUUSD.m", "EURUSD.m"]
+SYMBOLS = ["XAUUSD", "EURUSD"]
 
 LOT_SIZE = 0.01
 
 SYMBOL_CONFIG = {
-    "XAUUSD.m": {
+    "XAUUSD": {
         "sl_min": 30,
         "sl_max": 80,
         "tp_min": 50,
@@ -18,7 +18,7 @@ SYMBOL_CONFIG = {
         "point_value": 0.01,
         "digits": 2,
     },
-    "EURUSD.m": {
+    "EURUSD": {
         "sl_min": 5,
         "sl_max": 10,
         "tp_min": 8,
@@ -29,8 +29,8 @@ SYMBOL_CONFIG = {
 }
 
 BROKER_TO_BASE = {
-    "XAUUSD.m": "XAUUSD.m",
-    "EURUSD.m": "EURUSD.m"
+    "XAUUSD.m": "XAUUSD",
+    "EURUSD.m": "EURUSD"
 }
 
 RSI_PERIOD = 14

@@ -29,8 +29,8 @@ SYMBOL_CONFIG = {
 }
 
 BROKER_TO_BASE = {
-    "XAUUSD.m": "XAUUSD",
-    "EURUSD.m": "EURUSD"
+    "XAUUSD.m": "XAUUSD.m",
+    "EURUSD.m": "EURUSD.m"
 }
 
 RSI_PERIOD = 14
